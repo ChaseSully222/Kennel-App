@@ -54,3 +54,13 @@ img {
   flex-wrap: wrap;
   justify-content: space-between;
 }
+
+#sonGoku {
+  height: 350px;
+  width: auto
+}
+
+#dogImg {
+  height: 350px;
+  width: auto
+}

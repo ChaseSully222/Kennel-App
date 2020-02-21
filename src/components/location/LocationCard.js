@@ -4,9 +4,9 @@ const LocationCard = () => {
   return (
     <div className="card">
       <div className="card-content">
-        <h1>Locations:</h1>
+        <h1>Location:</h1>
         <section>
-          <b>Address: </b>470 Craighead St, Nashville, TN 37204
+          <b>Address: </b>500 Puppy Way, Nashville, TN 37027
         </section>
       </div>
     </div>
