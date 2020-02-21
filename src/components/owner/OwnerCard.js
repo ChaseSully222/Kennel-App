@@ -5,7 +5,8 @@ const OwnerCard = () => {
     <div className="card">
       <div className="card-content">
         <h1>Owner:</h1>
-        <section>Billy Bob</section>
+        <section>Goku</section>
+        <img id="sonGoku" src={require("./goku.jpg")} alt="Billy Bob" />
       </div>
     </div>
   );
