@@ -9,8 +9,8 @@ const EmployeeCard = () => {
             <ul>
                 <li>Chase</li>
                 <li>Chance</li>
-                <li>Chase</li>
-                <li>Chase</li>
+                <li>Bobby</li>
+                <li>Lisa</li>
             </ul>
         </section>
       </div>

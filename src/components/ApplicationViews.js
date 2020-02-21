@@ -2,7 +2,9 @@ import { Route } from "react-router-dom";
 import React from "react";
 import Home from "./home/Home";
 import AnimalCard from "./animal/AnimalCard";
-import LocationCard from "./location/LocationCard"
+import LocationCard from "./location/LocationCard";
+import EmployeeCard from "./employee/EmployeeCard";
+import OwnerCard from "./owner/OwnerCard";
 //only include these once they are built - previous practice exercise
 // import LocationCard from "./location/LocationCard";
 // import EmployeeCard from "./employee/EmployeeCard";
@@ -28,6 +30,18 @@ const ApplicationViews = () => {
         path="/locations"
         render={props => {
           return <LocationCard />;
+        }}
+      />
+      <Route
+        path="/employees"
+        render={props => {
+          return <EmployeeCard />;
+        }}
+      />
+      <Route
+        path="/owners"
+        render={props => {
+          return <OwnerCard />;
         }}
       />
     </React.Fragment>
