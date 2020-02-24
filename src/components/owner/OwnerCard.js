@@ -1,12 +1,15 @@
 import React from "react";
 
-const OwnerCard = () => {
+const OwnerCard = props => {
   return (
     <div className="card">
       <div className="card-content">
-        <h1>Owner:</h1>
-        <section>Goku</section>
-        <img id="sonGoku" src={require("./goku.jpg")} alt="Billy Bob" />
+        <h1>Owner</h1>
+        <h3>{props.owner.name}</h3>
+        <picture>{props.owner.picture}</picture>
+        <section>
+          <em>{props.owner.phoneNumber}</em>
+        </section>
       </div>
     </div>
   );
