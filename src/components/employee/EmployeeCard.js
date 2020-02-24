@@ -1,18 +1,10 @@
 import React from "react";
 
-const EmployeeCard = () => {
+const EmployeeCard = props => {
   return (
     <div className="card">
       <div className="card-content">
-        <h1>Employees:</h1>
-        <section>
-            <ul>
-                <li>Chase</li>
-                <li>Chance</li>
-                <li>Bobby</li>
-                <li>Lisa</li>
-            </ul>
-        </section>
+        <h1>{props.employee.name}</h1>
       </div>
     </div>
   );

@@ -3,5 +3,21 @@
         { "id": 1, "name": "Doodles", "breed": "Poodle"},
         { "id": 2, "name": "Decker", "breed": "German Shepherd" },
         { "id": 3, "name": "Esme", "breed": "Pitbull" }
+    ],
+    "locations": [
+        {"id": 1, "name": "North Nashville"},
+        {"id": 2, "name": "South Nashville"},
+        {"id": 3, "name": "East Nashville"},
+        {"id": 4, "name": "West Nashville"}
+    ],
+    "employees": [
+        {"id":1, "name": "Chase" },
+        {"id":2, "name": "Chance" },
+        {"id":3, "name": "Bobby" },
+        {"id":4, "name": "Lisa" }
+    ],
+    "owners": [
+        {"id":1, "name": "Goku", "phoneNumber": "615-222-2222"},
+        {"id":2, "name": "Vegeta", "phoneNumber": "615-333-3333"}
     ]
 }

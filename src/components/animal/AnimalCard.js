@@ -1,27 +1,20 @@
 import React from "react";
+import "./Animal.css";
 
-const AnimalCard = () => {
+const AnimalCard = props => {
   return (
     <div className="card">
       <div className="card-content">
         <picture>
-          <img id="dogImg" src={require("./husky.jpg")} alt="My Dog" />
+          <img src={require('./dog.svg')} alt="My Dog" />
         </picture>
-        <h3>
-          Name: <span className="card-petname">Gohan</span>
-        </h3>
-        <p>Breed: Siberian Husky</p>
-        <picture>
-          <img id="dogImg" src={require("./gsDog.jpg")} alt="My Dog" />
-        </picture>
-        <h3>
-          Name: <span className="card-petname">Vegeta</span>
-        </h3>
-        <p>Breed: German Shepherd</p>
+        <h3>Name: <span className="card-petname">
+          {props.animal.name}
+        </span></h3>
+        <p>Breed: {props.animal.breed}</p>
       </div>
     </div>
-    
   );
-};
+}
 
 export default AnimalCard;
