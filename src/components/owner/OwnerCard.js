@@ -10,6 +10,7 @@ const OwnerCard = props => {
         <section>
           <em>{props.owner.phoneNumber}</em>
         </section>
+        <button type="button" onClick={() => props.deleteOwner(props.owner.id)}>Remove</button>
       </div>
     </div>
   );

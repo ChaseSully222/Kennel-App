@@ -8,6 +8,7 @@ const EmployeeCard = props => {
         <picture>
           <img src={props.employee.picture} alt="Employee"></img>
         </picture>
+        <button type="button" onClick={() => props.deleteEmployee(props.employee.id)}>You're Fired!</button>
       </div>
     </div>
   );
