@@ -1,23 +1,72 @@
 {
   "animals": [
-    { "id": 1, "name": "Doodles", "breed": "Poodle", "image":"https://vetstreet.brightspotcdn.com/dims4/default/b5fcb62/2147483647/thumbnail/645x380/quality/90/?url=https%3A%2F%2Fvetstreet-brightspot.s3.amazonaws.com%2F38%2Fec%2Ffd4eecbe4f57a282b707f097ef33%2Fpoodle-ap-1j99ae-645-x-380.jpg" },
-    { "id": 2, "name": "Decker", "breed": "German Shepherd", "image": "https://s3.amazonaws.com/cdn-origin-etr.akc.org/wp-content/uploads/2017/11/12213218/German-Shepherd-on-White-00.jpg"},
-    { "id": 3, "name": "Bubba", "breed": "Pitbull", "image": "https://getyourpet.com/wp-content/uploads/2018/09/pitbull-in-phoenix-yard.jpg"}
+    {
+      "id": 1,
+      "name": "Doodles",
+      "breed": "Poodle",
+      "image": "https://vetstreet.brightspotcdn.com/dims4/default/b5fcb62/2147483647/thumbnail/645x380/quality/90/?url=https%3A%2F%2Fvetstreet-brightspot.s3.amazonaws.com%2F38%2Fec%2Ffd4eecbe4f57a282b707f097ef33%2Fpoodle-ap-1j99ae-645-x-380.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Decker",
+      "breed": "German Shepherd",
+      "image": "https://s3.amazonaws.com/cdn-origin-etr.akc.org/wp-content/uploads/2017/11/12213218/German-Shepherd-on-White-00.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Bubba",
+      "breed": "Pitbull",
+      "image": "https://getyourpet.com/wp-content/uploads/2018/09/pitbull-in-phoenix-yard.jpg"
+    }
   ],
   "locations": [
-    { "id": 1, "name": "North Nashville" },
-    { "id": 2, "name": "South Nashville" },
-    { "id": 3, "name": "East Nashville" },
-    { "id": 4, "name": "West Nashville" }
+    {
+      "id": 1,
+      "name": "North Nashville"
+    },
+    {
+      "id": 2,
+      "name": "South Nashville"
+    },
+    {
+      "id": 3,
+      "name": "East Nashville"
+    }
   ],
   "employees": [
-    { "id": 1, "name": "Hank Hill", "picture": "https://upload.wikimedia.org/wikipedia/en/c/c4/Hank_Hill.png"},
-    { "id": 2, "name": "Jeff Boomhauer", "picture": "https://upload.wikimedia.org/wikipedia/en/b/be/Jeff_Boomhauer.png" },
-    { "id": 3, "name": "Dale Gribble", "picture": "https://upload.wikimedia.org/wikipedia/en/a/a7/Dale_Gribble.png" },
-    { "id": 4, "name": "Bill Dauterive", "picture": "https://upload.wikimedia.org/wikipedia/en/9/9b/Bill_Dauterive.png" }
+    {
+      "id": 1,
+      "name": "Hank Hill",
+      "picture": "https://upload.wikimedia.org/wikipedia/en/c/c4/Hank_Hill.png"
+    },
+    {
+      "id": 2,
+      "name": "Jeff Boomhauer",
+      "picture": "https://upload.wikimedia.org/wikipedia/en/b/be/Jeff_Boomhauer.png"
+    },
+    {
+      "id": 3,
+      "name": "Dale Gribble",
+      "picture": "https://upload.wikimedia.org/wikipedia/en/a/a7/Dale_Gribble.png"
+    },
+    {
+      "id": 4,
+      "name": "Bill Dauterive",
+      "picture": "https://upload.wikimedia.org/wikipedia/en/9/9b/Bill_Dauterive.png"
+    }
   ],
   "owners": [
-    { "id": 1, "name": "Rick Sanchez", "phoneNumber": "222-222-2222", "picture": "https://upload.wikimedia.org/wikipedia/en/a/a6/Rick_Sanchez.png" },
-    { "id": 2, "name": "Mortimer 'Morty' Smith", "phoneNumber": "333-333-3333", "picture": "https://upload.wikimedia.org/wikipedia/en/thumb/c/c3/Morty_Smith.png/150px-Morty_Smith.png"}
+    {
+      "id": 1,
+      "name": "Rick Sanchez",
+      "phoneNumber": "222-222-2222",
+      "picture": "https://upload.wikimedia.org/wikipedia/en/a/a6/Rick_Sanchez.png"
+    },
+    {
+      "id": 2,
+      "name": "Mortimer 'Morty' Smith",
+      "phoneNumber": "333-333-3333",
+      "picture": "https://upload.wikimedia.org/wikipedia/en/thumb/c/c3/Morty_Smith.png/150px-Morty_Smith.png"
+    }
   ]
 }
