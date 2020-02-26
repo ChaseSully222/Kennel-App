@@ -6,7 +6,7 @@ const OwnerCard = props => {
       <div className="card-content">
         <h1>Owner</h1>
         <h3>{props.owner.name}</h3>
-        <picture><img src={props.owner.picture}></img></picture>
+        <picture><img src={props.owner.picture} alt="Owners"></img></picture>
         <section>
           <em>{props.owner.phoneNumber}</em>
         </section>
