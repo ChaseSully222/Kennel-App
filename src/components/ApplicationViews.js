@@ -29,7 +29,10 @@ const ApplicationViews = () => {
         path="/animals/:animalId(\d+)"
         render={props => {
           return (
-            <AnimalDetail animalId={parseInt(props.match.params.animalId)} />
+            <AnimalDetail
+              animalId={parseInt(props.match.params.animalId)}
+              {...props}
+            />
           );
         }}
       />
@@ -46,6 +49,7 @@ const ApplicationViews = () => {
           return (
             <LocationDetail
               locationId={parseInt(props.match.params.locationId)}
+            {...props}
             />
           );
         }}
