@@ -6,9 +6,9 @@ const NavBar = () => {
   return (
     <header>
       <h1 className="site-title">
-        Student Kennels
+        Hybrid Homes Kennel Co.
         <br />
-        <small>Loving care when you're not there.</small>
+        <small>We are actually a secretly funded lab with the sole purpose of creating exotic hybrid animals.</small>
       </h1>
       <nav>
         <ul className="container">
