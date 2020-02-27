@@ -13,7 +13,7 @@ const Login = props => {
   const handleLogin = e => {
     e.preventDefault();
     sessionStorage.setItem("credentials", JSON.stringify(credentials));
-    props.history.push("/animals");
+    props.history.push("/");
   };
 
   return (
