@@ -1,14 +1,21 @@
-import { Route } from "react-router-dom";
+import { Route, Redirect } from "react-router-dom";
 import React from "react";
 import Home from "./home/Home";
-import LocationList from "./location/LocationList";
-import EmployeeList from "./employee/EmployeeList";
-import OwnerList from "./owner/OwnerList";
 import AnimalList from "./animal/AnimalList";
 import AnimalDetail from "./animal/AnimalDetail";
+import AnimalForm from "./animal/AnimalForm";
+import LocationList from "./location/LocationList";
 import LocationDetail from "./location/LocationDetail";
+import LocationForm from "./location/LocationForm";
+import EmployeeList from "./employee/EmployeeList";
+import EmployeeForm from "./employee/EmployeeForm";
+import OwnerList from "./owner/OwnerList";
+import OwnerForm from "./owner/OwnerForm";
+import Login from "./auth/Login";
 
 const ApplicationViews = () => {
+  // Check if credentials are in session storage returns true/false
+  const isAuthenticated = () => sessionStorage.getItem("credentials") !== null;
   return (
     <React.Fragment>
       <Route
@@ -22,7 +29,11 @@ const ApplicationViews = () => {
         exact
         path="/animals"
         render={props => {
-          return <AnimalList />;
+          if (isAuthenticated()) {
+            return <AnimalList {...props} />;
+          } else {
+            return <Redirect to="/login" />;
+          }
         }}
       />
       <Route
@@ -37,10 +48,20 @@ const ApplicationViews = () => {
         }}
       />
       <Route
+        path="/animals/new"
+        render={props => {
+          if (isAuthenticated()) {
+            return <AnimalForm {...props} />;
+          } else {
+            return <Redirect to="/login" />;
+          }
+        }}
+      />
+      <Route
         exact
         path="/locations"
         render={props => {
-          return <LocationList />;
+          return <LocationList {...props} />;
         }}
       />
       <Route
@@ -49,23 +70,43 @@ const ApplicationViews = () => {
           return (
             <LocationDetail
               locationId={parseInt(props.match.params.locationId)}
-            {...props}
+              {...props}
             />
           );
         }}
       />
       <Route
-        path="/employees"
+        path="/locations/new"
         render={props => {
-          return <EmployeeList />;
+          return <LocationForm {...props} />;
         }}
       />
       <Route
-        path="/owners"
+        exact
+        path="/employees"
         render={props => {
-          return <OwnerList />;
+          return <EmployeeList {...props} />;
         }}
       />
+      <Route
+        path="/employees/new"
+        render={props => {
+          return <EmployeeForm {...props} />;
+        }}
+      />
+      <Route
+        exact path="/owners"
+        render={props => {
+          return <OwnerList {...props}/>;
+        }}
+      />
+      <Route
+        path="/owners/new"
+        render={props => {
+          return <OwnerForm {...props} />;
+        }}
+      />
+      <Route path="/login" component={Login} />
     </React.Fragment>
   );
 };

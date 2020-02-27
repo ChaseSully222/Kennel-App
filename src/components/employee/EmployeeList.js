@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 //import the components we will need
 import EmployeeCard from "./EmployeeCard";
 
-const EmployeeList = () => {
+const EmployeeList = props => {
   const [employees, setEmployees] = useState([]);
 
   const getEmployees = () => {
@@ -23,11 +23,28 @@ const EmployeeList = () => {
   }, []);
 
   return (
-    <div className="container-cards">
-      {employees.map(employee => (
-        <EmployeeCard key={employee.id} employee={employee} deleteEmployee={deleteEmployee} />
-      ))}
-    </div>
+    <>
+      <section className="section-content">
+        <button
+          type="button"
+          className="btn"
+          onClick={() => {
+            props.history.push("/employees/new");
+          }}
+        >
+          New Employee
+        </button>
+      </section>
+      <div className="container-cards">
+        {employees.map(employee => (
+          <EmployeeCard
+            key={employee.id}
+            employee={employee}
+            deleteEmployee={deleteEmployee}
+          />
+        ))}
+      </div>
+    </>
   );
 };
 
