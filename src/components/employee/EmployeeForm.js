@@ -3,7 +3,7 @@ import EmployeeManager from "../../modules/EmployeeManager";
 import "./EmployeeForm.css";
 
 const EmployeeForm = props => {
-  const [employee, setEmployee] = useState({ name: "" });
+  const [employee, setEmployee] = useState({ name: "", picture:"img src"});
   const [isLoading, setIsLoading] = useState(false);
 
   const handleFieldChange = evt => {
@@ -45,9 +45,9 @@ const EmployeeForm = props => {
               required
               onChange={handleFieldChange}
               id="picture"
-              placeholder="Employee Picture"
+              placeholder="picture"
             />
-            <label htmlFor="name">Employee Photo</label>
+            <label htmlFor="picture">Picture</label>
           </div>
           <div className="alignRight">
             <button

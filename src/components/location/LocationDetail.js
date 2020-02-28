@@ -22,7 +22,7 @@ const LocationDetail = props => {
       });
       setIsLoading(false);
     });
-  }, [props.locationId]);
+  }, []);
 
   return (
     <div className="card">

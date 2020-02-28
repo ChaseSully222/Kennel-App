@@ -8,7 +8,18 @@ const EmployeeCard = props => {
         <picture>
           <img src={props.employee.picture} alt="Employee"></img>
         </picture>
-        <button type="button" onClick={() => props.deleteEmployee(props.employee.id)}>You're Fired!</button>
+        <button
+          type="button"
+          onClick={() => props.history.push(`/employees/${props.employee.id}/edit`)}
+        >
+          Edit
+        </button>
+        <button
+          type="button"
+          onClick={() => props.deleteEmployee(props.employee.id)}
+        >
+          You're Fired!
+        </button>
       </div>
     </div>
   );

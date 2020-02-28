@@ -6,11 +6,21 @@ const OwnerCard = props => {
       <div className="card-content">
         <h1>Owner</h1>
         <h3>{props.owner.name}</h3>
-        <picture><img src={props.owner.picture} alt="Owners"></img></picture>
+        <picture>
+          <img src={props.owner.picture} alt="Owners"></img>
+        </picture>
         <section>
           <em>{props.owner.phoneNumber}</em>
         </section>
-        <button type="button" onClick={() => props.deleteOwner(props.owner.id)}>Remove</button>
+        <button
+          type="button"
+          onClick={() => props.history.push(`/owners/${props.owner.id}/edit`)}
+        >
+          Edit
+        </button>
+        <button type="button" onClick={() => props.deleteOwner(props.owner.id)}>
+          Remove
+        </button>
       </div>
     </div>
   );
