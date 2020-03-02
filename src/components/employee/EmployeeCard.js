@@ -10,10 +10,21 @@ const EmployeeCard = props => {
         </picture>
         <button
           type="button"
-          onClick={() => props.history.push(`/employees/${props.employee.id}/edit`)}
+          onClick={() => {
+            props.history.push(`/employees/${props.employee.id}/details`);
+          }}
+        >
+          Details
+        </button>
+        <button
+          type="button"
+          onClick={() =>
+            props.history.push(`/employees/${props.employee.id}/edit`)
+          }
         >
           Edit
         </button>
+
         <button
           type="button"
           onClick={() => props.deleteEmployee(props.employee.id)}

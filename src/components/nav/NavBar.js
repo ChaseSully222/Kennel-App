@@ -2,41 +2,42 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./NavBar.css";
 
-const NavBar = () => {
+const NavBar = props => {
   return (
     <header>
       <h1 className="site-title">
         Hybrid Homes Kennel Co.
         <br />
-        <small>We are actually a secretly funded lab with the sole purpose of creating exotic hybrid animals.</small>
+        <small>Loving care when you're not there.</small>
       </h1>
       <nav>
         <ul className="container">
           <li>
-            <Link className="nav-link" to="/">
-              Home
-            </Link>
+            <Link className="nav-link" to="/"> Home </Link>
           </li>
+          {props.hasUser
+            ? <li>
+                <Link className="nav-link" to="/animals"> Animals </Link>
+              </li>
+            : null}
           <li>
-            <Link className="nav-link" to="/animals">
-              Animals
-            </Link>
+            <Link className="nav-link" to="/locations"> Locations </Link>
           </li>
-          <li>
-            <Link className="nav-link" to="/locations">
-              Locations
-            </Link>
-          </li>
-          <li>
-            <Link className="nav-link" to="/employees">
-              Employees
-            </Link>
-          </li>
-          <li>
-            <Link className="nav-link" to="/owners">
-              Owners
-            </Link>
-          </li>
+          {props.hasUser
+            ? <li>
+                <Link className="nav-link" to="/employees"> Employees </Link>
+              </li>
+            : null}
+          {props.hasUser
+            ? <li>
+                <Link className="nav-link" to="/owners"> Owners </Link>
+              </li>
+            : null}
+          {!props.hasUser
+            ? <li>
+                <Link className="nav-link" to="/login"> Login </Link>
+              </li>
+            : null}
         </ul>
       </nav>
     </header>
