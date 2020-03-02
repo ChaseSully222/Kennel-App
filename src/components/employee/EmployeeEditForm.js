@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from "react"
-import EmployeeManager from "../../modules/EmployeeManager"
-import "./EmployeeForm.css"
+import React, { useState, useEffect } from "react";
+import EmployeeManager from "../../modules/EmployeeManager";
+import "./EmployeeForm.css";
 
 const EmployeeEditForm = props => {
-  const [employee, setEmployee] = useState({ name: ""});
+  const [employee, setEmployee] = useState({ name: "" });
   const [isLoading, setIsLoading] = useState(false);
 
   const handleFieldChange = evt => {
@@ -13,7 +13,7 @@ const EmployeeEditForm = props => {
   };
 
   const updateExistingEmployee = evt => {
-    evt.preventDefault()
+    evt.preventDefault();
     setIsLoading(true);
 
     // This is an edit, so we need the id
@@ -23,16 +23,16 @@ const EmployeeEditForm = props => {
       picture: employee.picture
     };
 
-    EmployeeManager.update(editedEmployee)
-      .then(() => props.history.push("/employees"))
-  }
+    EmployeeManager.update(editedEmployee).then(() =>
+      props.history.push("/employees")
+    );
+  };
 
   useEffect(() => {
-    EmployeeManager.get(props.match.params.employeeId)
-      .then(employee => {
-        setEmployee(employee);
-        setIsLoading(false);
-      });
+    EmployeeManager.get(props.match.params.employeeId).then(employee => {
+      setEmployee(employee);
+      setIsLoading(false);
+    });
   }, []);
 
   return (
@@ -62,15 +62,18 @@ const EmployeeEditForm = props => {
           </div>
           <div className="alignRight">
             <button
-              type="button" disabled={isLoading}
+              type="button"
+              disabled={isLoading}
               onClick={updateExistingEmployee}
               className="btn btn-primary"
-            >Submit</button>
+            >
+              Submit
+            </button>
           </div>
         </fieldset>
       </form>
     </>
   );
-}
+};
 
-export default EmployeeEditForm
+export default EmployeeEditForm;

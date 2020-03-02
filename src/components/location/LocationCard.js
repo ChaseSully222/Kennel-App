@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
 const LocationCard = props => {
   return (
@@ -11,12 +10,19 @@ const LocationCard = props => {
           <b>Address: </b>
           {props.locationObj.address}
         </section>
-        <Link to={`/locations/${props.locationObj.id}`}>
-          <button>Details</button>
-        </Link>
         <button
           type="button"
-          onClick={() => props.history.push(`/locations/${props.locationObj.id}/edit`)}
+          onClick={() => {
+            props.history.push(`/locations/${props.locationObj.id}/details`);
+          }}
+        >
+          Details
+        </button>
+        <button
+          type="button"
+          onClick={() =>
+            props.history.push(`/locations/${props.locationObj.id}/edit`)
+          }
         >
           Edit
         </button>

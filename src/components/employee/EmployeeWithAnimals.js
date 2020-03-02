@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import EmployeeManager from '../../modules/EmployeeManager'
 import AnimalCard from '../animal/AnimalCard'
+import AnimalManager from '../../modules/AnimalManager';
 
 const EmployeeWithAnimals = props => {
   const [employee, setEmployee] = useState({});
@@ -17,7 +18,7 @@ const EmployeeWithAnimals = props => {
 
   return (
     <div className="card">
-      <h2>Employee: {employee.name}</h2>
+      <p>Employee: {employee.name}</p>
       {animals.map(animal =>
         <AnimalCard
           key={animal.id}

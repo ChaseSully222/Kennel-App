@@ -22,12 +22,13 @@ const AnimalCard = props => {
         >
           Edit
         </button>
-        <button
+        {props.deleteAnimal
+         &&  <button
           type="button"
           onClick={() => props.deleteAnimal(props.animal.id)}
         >
           Discharge
-        </button>
+        </button>}
       </div>
     </div>
   );
